@@ -20,8 +20,8 @@
       }
 }
 
-@mixin btn ($pad-inline: 15px, $bord-rad: 0) {
-  background-color: $brand;
+@mixin btn ($pad-inline: 15px, $bord-rad: 0, $color: $brand) {
+  background-color: $color;
   padding: 8px $pad-inline;
   border: none;
   color: white;
@@ -29,7 +29,26 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+
 @mixin anchorDefault {
   text-decoration: none;
   color: currentColor;
+}
+
+@mixin jumboCard($bord-rad:15px, $pad-inline: 60px, $pad-block: 30px){
+  border: 4px solid salmon;
+  background-color: white;
+  border-radius: $bord-rad;
+  padding-block:$pad-block;
+  padding-inline:$pad-inline;
+  text-align: center;
+  max-width: $hero-card-width;
+
+  h1{
+    font-size: $hero-title;
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: $hero-publication;
+  }
 }

@@ -58,8 +58,8 @@ export default {
     
    nav.links-wrapper{
        display: flex;
-       column-gap: 40px;
-       row-gap: 20px;
+       column-gap: $col-gap;
+       row-gap: $row-gap;
        align-items: center;
        justify-content: center;
     //    border: 2px solid red;

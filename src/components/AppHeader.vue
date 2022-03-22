@@ -69,7 +69,9 @@
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
 
-   .header{
+   div.header{
+       
+        margin-bottom: 10px;
         div.container{        
             figure.logo{
                 // border: 2px solid salmon;
