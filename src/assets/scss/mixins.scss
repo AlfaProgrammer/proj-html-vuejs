@@ -1,0 +1,30 @@
+@import '@/assets/scss/_shared.scss';
+
+@mixin defaultSet {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,ol{
+        list-style: none;
+      }
+      .container{
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+}
+
+@mixin btn ($pad-inline: 15px, $bord-rad: 0) {
+  background-color: $brand;
+  padding: 8px $pad-inline;
+  border: none;
+  color: white;
+  border-radius: $bord-rad;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@mixin anchorDefault {
+  text-decoration: none;
+  color: currentColor;
+}
