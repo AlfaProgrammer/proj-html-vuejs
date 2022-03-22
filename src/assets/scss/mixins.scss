@@ -13,6 +13,11 @@
         max-width: 1140px;
         margin: 0 auto;
       }
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
 }
 
 @mixin btn ($pad-inline: 15px, $bord-rad: 0) {

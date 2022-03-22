@@ -21,10 +21,13 @@
 
 <style lang="scss">
   @import '@/assets/scss/mixins.scss';
+  @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 /* STYLE COMPONENT */
   @include defaultSet;
-
+  a{
+    @include anchorDefault
+  }
   // #app{
   //   background: darkcyan;
   // }
