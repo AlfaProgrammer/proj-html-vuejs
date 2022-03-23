@@ -1,17 +1,20 @@
 <template>
   <div class="main-section">
       <JumboHero />
+      <FoodieJournal />
   </div>
 </template>
 
 <script>
+import FoodieJournal from './FoodieJournal.vue'
 import JumboHero from './JumboHero.vue'
-    // import state from '../store.js'
+
 
     export default {
         name: 'AppMain',
         components:{
-            JumboHero
+            JumboHero,
+            FoodieJournal
         },
         data(){
             return{

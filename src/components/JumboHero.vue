@@ -1,6 +1,7 @@
 <template>
   <div class="jumbotron">
       <div class="jumbo-card">
+        <p class="daily-pick">Today's pick</p>
         <h1> {{ jumboTitle }} </h1>
         <p> {{ jumboData }} </p>
       </div>
@@ -36,7 +37,16 @@ import state from '../store.js'
         background-repeat: no-repeat;
 
         div.jumbo-card {
-            @include jumboCard
+            @include jumboCard;
+                position: relative;
+
+            p.daily-pick{
+                @include btn($width: max-content);
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: calc($hero-card-pd-block / -2);
+            }
         }  
        
     }

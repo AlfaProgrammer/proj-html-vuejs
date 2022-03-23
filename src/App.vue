@@ -28,11 +28,14 @@
 
 /* STYLE COMPONENT */
   @include defaultSet;
+
   a{
     @include anchorDefault
   }
-  // #app{
-  //   background: darkcyan;
-  // }
+
+  /*///////////////////////// RICORDA DI TOGLIERE il PADDING QUIIII /////////////////////////*/
+  #app{
+    padding-bottom: 600px;
+  }
   
 </style>

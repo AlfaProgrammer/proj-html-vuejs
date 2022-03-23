@@ -20,7 +20,7 @@
       }
 }
 
-@mixin btn ($pad-inline: 15px, $bord-rad: 0, $color: $brand) {
+@mixin btn ($pad-inline: 15px, $bord-rad: 0, $color: $brand, $width:100%) {
   background-color: $color;
   padding: 8px $pad-inline;
   border: none;
@@ -28,6 +28,7 @@
   border-radius: $bord-rad;
   text-transform: uppercase;
   font-weight: 700;
+  max-width: $width;
 }
 
 @mixin anchorDefault {
@@ -35,8 +36,8 @@
   color: currentColor;
 }
 
-@mixin jumboCard($bord-rad:15px, $pad-inline: 60px, $pad-block: 30px){
-  border: 4px solid salmon;
+@mixin jumboCard($bord-rad:15px, $pad-inline: 60px, $pad-block: $hero-card-pd-block){
+  // border: 4px solid salmon;
   background-color: white;
   border-radius: $bord-rad;
   padding-block:$pad-block;
@@ -50,5 +51,21 @@
   }
   p{
     font-size: $hero-publication;
+  }
+}
+
+@mixin articleCard {
+  
+  figure{
+    margin-bottom: $sec-img-mb;
+  }
+  h3,p{
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: $sec-mcr-title;
+  }
+  p{
+    color: $icons;
+    font-size: $sec-mcr-title-reference;
   }
 }
