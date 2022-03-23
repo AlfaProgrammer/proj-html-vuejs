@@ -2,19 +2,39 @@
   <div class="container">
       <h1 class="title"> {{sectionsTitle}} </h1>
       <ul class="card-wrapper">
-          <li v-for="(el, i) in articlesList" :key="i">
-              <figure class="article-image">
-                  <img :src="el.imgSrc" alt="">
-              </figure>
-             <h3> {{ el.articleTitle }} </h3>
-             <p> <span> By {{ el.author }} |</span> {{ el.publication }} </p>
-          </li>
+
+        <!-- <li v-for="(el, i) in articlesList" :key="i">
+            <figure class="article-image">
+                <img :src="el.imgSrc" alt="">
+            </figure>
+            <h3> {{ el.articleTitle }} </h3>
+            <p> <span> By {{ el.author }} |</span> {{ el.publication }} </p>
+        </li> -->
+        
+        <!-- <CardArticle  v-for="(el, i) in articlesList" :key="i"
+                      :articleData="el"/> -->
+        <CardArticle v-for="(el, i) in articlesList" :key="i">
+
+            <template v-slot:card-image>
+                <figure>
+                    <img :src="el.imgSrc" alt="">
+                </figure>
+            </template>
+            <template v-slot:card-title>
+                 <h3> {{ el.articleTitle }} </h3>
+            </template>
+            <template v-slot:card-author>
+                 <p> <span> By {{ el.author }} |</span> {{ el.publication }} </p>
+            </template>
+
+        </CardArticle>
       </ul>
   </div>
 </template>
 
 <script>
 import state from '../store.js'
+import CardArticle from './CardArticle.vue'
 
 export default {
     name:'FoodieJournal',
@@ -23,6 +43,9 @@ export default {
             sectionsTitle: state.journalSection.title,
             articlesList: state.journalSection.articles
         }
+    },
+    components:{
+        CardArticle
     }
 
 }
@@ -50,9 +73,7 @@ export default {
             display: flex;
             gap: 30px;
 
-            li{
-               @include articleCard;
-            }
+            
         }
     }
 </style>
