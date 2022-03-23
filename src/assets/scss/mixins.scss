@@ -54,6 +54,25 @@
   }
 }
 
+@mixin categorySection($bg-color: white, $text-align:center, $card-wrap-display: flex) {
+
+    background-color: $bg-color;
+    text-align: $text-align;
+    padding: 30px;
+    color: $text;
+    
+    h1{
+        font-size: $sec-title;
+        text-transform: uppercase;
+        margin-bottom: $sec-title-mb;
+    }
+
+    ul.card-wrapper {
+        display: $card-wrap-display;
+        gap: 30px;
+    }
+}
+
 @mixin articleCard {
   
   figure{
@@ -62,10 +81,13 @@
   h3,p{
     max-width: 80%;
     margin: 0 auto;
-    font-size: $sec-mcr-title;
+  } 
+  h3{
+    font-size: $sec-pwart-title;
   }
+
   p{
     color: $icons;
-    font-size: $sec-mcr-title-reference;
+    font-size: $sec-pwart-title-reference;
   }
 }

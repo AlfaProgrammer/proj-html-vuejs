@@ -1,6 +1,7 @@
 $brand: #fc7525;
 $text: #3C3C41;
 $icons: #9C9894;
+$main: #F5F5F1;
 
 /*HERO*/
 /*pd = padding*/
@@ -12,19 +13,23 @@ $hero-card-pd-block: 30px;
 
 /*SECTIONS*/
 /*mb = margin bottom*/
+/*pb/pt = padding bottom/padding top */
 $sec-img-mb:20px;
 $sec-title: 20px;
-$sect-title-mb:20px;  
+$sec-title-mb:20px;  
 $sec-desctiption: 15px;
 $sec-desctiption-mb: 40px;
+$sec-pb: 100px;
+$sec-pt: 100px; 
 
-/*SECTION MAIN CARDS*/
-/*mcr = main card*/
+/*SECTION pwart CARDS*/
+/*pwart = preview article card*/
 /*mb = margin bottom*/
-$sec-mcr-title:20px;
-$sec-mcr-title-reference:15px;
-$sec-mcr-text:15px;
-$sec-mcr-text-mb:20px;
+$sec-pwart-title:20px;
+$sec-pwart-title-reference:15px;
+$sec-pwart-title-mb:10px;
+$sec-pwart-text:15px;
+$sec-pwart-text-mb:20px;
 
 
 /*NAV LINKS*/

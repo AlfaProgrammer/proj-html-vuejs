@@ -11,9 +11,9 @@
             <p> <span> By {{ el.author }} |</span> {{ el.publication }} </p>
         </li> -->
         
-        <!-- <CardArticle  v-for="(el, i) in articlesList" :key="i"
-                      :articleData="el"/> -->
-        <CardArticle v-for="(el, i) in articlesList" :key="i">
+        <CardArticle  v-for="(el, i) in articlesList.slice(0, iterationLimit)" :key="i"
+                      :articleData="el"/>
+        <!-- <CardArticle v-for="(el, i) in articlesList.slice(0, iterationLimit)" :key="i">
 
             <template v-slot:card-image>
                 <figure>
@@ -27,7 +27,8 @@
                  <p> <span> By {{ el.author }} |</span> {{ el.publication }} </p>
             </template>
 
-        </CardArticle>
+        </CardArticle> -->
+
       </ul>
   </div>
 </template>
@@ -40,6 +41,7 @@ export default {
     name:'FoodieJournal',
     data(){
         return{
+            iterationLimit: 3,
             sectionsTitle: state.journalSection.title,
             articlesList: state.journalSection.articles
         }
@@ -56,24 +58,25 @@ export default {
     @import '@/assets/scss/mixins.scss';
 
     div.container{
-        background-color: white;
-        text-align: center;
-        padding: 30px;
-        color: $text;
-        border: 2px solid salmon;
+        // background-color: white;
+        // text-align: center;
+        // padding: 30px;
+        // color: $text;
+        // // border: 2px solid salmon;
+        @include categorySection;
         position: relative;
-        top:-(30px + $sec-title + $sect-title-mb);  /*Padding superiore fontsize and title margin bottom*/
+        top:-(30px + $sec-title + $sec-title-mb);  /*Padding superiore fontsize and title margin bottom*/
 
-        h1{
-            font-size: $sec-title;
-            text-transform: uppercase;
-            margin-bottom: $sect-title-mb;
-        }
-        ul.card-wrapper{
-            display: flex;
-            gap: 30px;
+        // h1{
+        //     font-size: $sec-title;
+        //     text-transform: uppercase;
+        //     margin-bottom: $sec-title-mb;
+        // }
+        // ul.card-wrapper{
+        //     display: flex;
+        //     gap: 30px;
 
             
-        }
+        // }
     }
 </style>
