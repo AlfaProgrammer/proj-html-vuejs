@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1 class="title"> {{sectionsTitle}} </h1>
+      <h3 class="title"> {{sectionsTitle}} </h3>
       <ul class="card-wrapper">
 
         <!-- <li v-for="(el, i) in articlesList" :key="i">

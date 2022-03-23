@@ -117,6 +117,40 @@ const state = new Vue.observable({
             imgSrc: require('@/assets/img/food/r-brooke-lark-96398-unsplash-min-460x295.jpg'),
             href:'#',
         },
+    ],
+    culinaryCollections:[
+        {
+            collectionName:'Drink',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/drinks-recipes.png')
+        },
+        {
+            collectionName:'Soup',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/soups-recipes.png')
+        },
+        {
+            collectionName:'Bakery',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/baking-recipes.png')
+        },
+        {
+            collectionName:'Dinner',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/dinner-recipes.png')
+        },
+        {
+            collectionName:'Healthy',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/healthy-recipes.png')
+        },
+        {
+            collectionName:'Staff Picks',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/staff-picks.png')
+        },
+        {
+            collectionName:'Appetisers',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/premium-recipes.png')
+        },
+        {
+            collectionName:'Quick & Easy',
+            collectionThumb: require('@/assets/img/svg-and-png-Icons/quick-easy-recipes.png')
+        },
     ]
 })
 

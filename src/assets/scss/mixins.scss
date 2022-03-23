@@ -23,7 +23,7 @@
 @mixin btn ($pad-inline: 15px, $bord-rad: 0, $color: $brand, $width:100%) {
   background-color: $color;
   padding: 8px $pad-inline;
-  border: none;
+  border-color: $color;
   color: white;
   border-radius: $bord-rad;
   text-transform: uppercase;
@@ -54,22 +54,67 @@
   }
 }
 
-@mixin categorySection($bg-color: white, $text-align:center, $card-wrap-display: flex) {
+@mixin displayFLEX( $al-items:center, 
+                    $j-content:center, 
+                    ) {
+    display: flex;
+    gap: $sec-flex-gap;
+    align-items: $al-items;
+    justify-content: $j-content;
+    // flex-direction: $f-direction;
+}
+
+@mixin displayGRID( $al-items:unset,
+                    $al-content:unset,
+                    $j-items:unset,
+                    $j-content:unset,
+                    $place-items:unset,
+                    $place-content:unset, 
+                    $col-num:2, 
+                    $custom-col: 1fr, 
+                    $row-num:2, 
+                    $custom-row: 1fr,
+                    $row-gap: 30px,
+                    $col-gap: 30px) {
+    display: grid;
+    grid-template-columns: repeat($col-num, $custom-col);
+    grid-template-rows: repeat($row-num, $custom-row);
+    row-gap: $row-gap;
+    column-gap: $col-gap;
+    align-items: $al-items;
+    align-content: $al-content;
+    justify-items: $j-items;
+    justify-content: $j-content;
+    place-items: $place-items;
+    place-content: $place-content;
+}
+
+@mixin categorySection($bg-color: white, $text-align:center) {
 
     background-color: $bg-color;
     text-align: $text-align;
-    padding: 30px;
+    padding: $sec-p $sec-p $sec-pb $sec-p;
     color: $text;
     
-    h1{
+    .title{
         font-size: $sec-title;
         text-transform: uppercase;
         margin-bottom: $sec-title-mb;
     }
-
-    ul.card-wrapper {
-        display: $card-wrap-display;
-        gap: 30px;
+    .sec-description{
+      color: $icons;
+      font-size:$sec-desctiption;
+      // border: 2px solid black;
+      max-width: 60%;
+      margin-inline: auto;
+      margin-bottom: $sec-desctiption-mb;
+    }
+    .card-wrapper {
+        @include displayFLEX;
+        // display: $card-wrap-display;
+        // gap: $sec-flex-gap;
+        // align-items: center;
+        // justify-content: center;
     }
 }
 
@@ -89,5 +134,40 @@
   p{
     color: $icons;
     font-size: $sec-pwart-title-reference;
+  }
+}
+
+@mixin articlePreview {
+  text-align: left;
+  background-color: white;
+  padding-bottom: 40px;
+  figure{
+    margin-bottom: $sec-pwart-img-mb;
+  }
+  .title, 
+  .description,
+  .reference{
+    max-width: 95%;
+    // border: 2px solid black;
+    margin: 0 auto;
+  }
+  .title{
+    font-size: $sec-pwart-title;
+    margin-bottom: $sec-pwart-title-mb;
+  }
+  .description,
+  .reference{
+    margin-bottom: $sec-pwart-text-mb;
+    font-size: $sec-pwart-text;         
+  }
+  .description{
+    line-height: 1.5rem;
+  }
+  hr{
+    max-width: 95%;
+    margin-inline:auto;
+    margin-bottom:$sec-pwart-text-mb;
+    border-top: 1px dashed $icons;
+    border-bottom: 1px dashed transparent;
   }
 }

@@ -3,6 +3,7 @@
       <JumboHero />
       <FoodieJournal />
       <PopularRecipes />
+      <CulinaryCollection />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FoodieJournal from './FoodieJournal.vue'
 import JumboHero from './JumboHero.vue'
 import PopularRecipes from './PopularRecipes.vue'
+import CulinaryCollection from './CulinaryCollection.vue'
 
 
 
@@ -18,7 +20,8 @@ import PopularRecipes from './PopularRecipes.vue'
         components:{
             JumboHero,
             FoodieJournal,
-            PopularRecipes
+            PopularRecipes,
+            CulinaryCollection
         },
         data(){
             return{
