@@ -9,51 +9,57 @@ const state = new Vue.observable({
         articles:[
             {
                 imgSrc: require('./assets/img/food/single-post-img3.jpg'),
-                articleTitle:'Food Corner: Top Japanese Restaurant for Sushi',
-                publication:'March 25th, 2019',
+                title:'Food Corner: Top Japanese Restaurant for Sushi',
+                reference:'March 25th, 2019',
                 author: 'admin',
-                articlePreview: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi.
+                description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi.
+                                 Similique autem iste nesciunt saepe alias vitae fugit, ratione voluptas.
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi.
                                  Similique autem iste nesciunt saepe alias vitae fugit, ratione voluptas.`
 
             },
             {
                 imgSrc: require('./assets/img/food/fi-roundup.jpg'),
-                articleTitle:'Roundup: My New Favourite Recipes For Healthy Living',
-                publication:'March 25th, 2019',
+                title:'Roundup: My New Favourite Recipes For Healthy Living',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             {
                 imgSrc: require('./assets/img/food/fi-toasts.jpg'),
-                articleTitle:'Why These Toasts with Tea are My New Favourite',
-                publication:'March 25th, 2019',
+                title:'Why These Toasts with Tea are My New Favourite',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             {
                 imgSrc: require('./assets/img/food/fi-korean-food.jpg'),
-                articleTitle:'Meal Prep: Korean Bibimbap with Kimeki',
-                publication:'March 25th, 2019',
+                title:'Meal Prep: Korean Bibimbap with Kimeki',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             {
                 imgSrc: require('./assets/img/food/fi-street-food.jpg'),
-                articleTitle:'Exploring Street Food in Bangkok',
-                publication:'March 25th, 2019',
+                title:'Exploring Street Food in Bangkok',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             {
                 imgSrc: require('./assets/img/food/fi-organic-breakfast.jpg'),
-                articleTitle:'Organic Choises For Healthier Living',
-                publication:'March 25th, 2019',
+                title:'Organic Choises For Healthier Living',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             {
                 imgSrc: require('./assets/img/food/fi-water-side-rest.jpg'),
-                articleTitle:'% Waterside Restaurants in Istanbul for Special Events',
-                publication:'March 25th, 2019',
+                title:'% Waterside Restaurants in Istanbul for Special Events',
+                reference:'March 25th, 2019',
                 author: 'admin'
             },
             
         ]
+    },
+    advertisementData:{
+        latestRecipesImg: require('@/assets/img/food/ad-bg.jpg'),
+        singaporeImg: require('@/assets/img/singapore-featured-image.jpg')
     },
     recipes:[
         {

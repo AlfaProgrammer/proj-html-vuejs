@@ -4,6 +4,7 @@
       <FoodieJournal />
       <PopularRecipes />
       <CulinaryCollection />
+      <FarmToTable />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import FoodieJournal from './FoodieJournal.vue'
 import JumboHero from './JumboHero.vue'
 import PopularRecipes from './PopularRecipes.vue'
 import CulinaryCollection from './CulinaryCollection.vue'
+import FarmToTable from './FarmToTable.vue'
 
 
 
@@ -21,7 +23,8 @@ import CulinaryCollection from './CulinaryCollection.vue'
             JumboHero,
             FoodieJournal,
             PopularRecipes,
-            CulinaryCollection
+            CulinaryCollection,
+            FarmToTable
         },
         data(){
             return{

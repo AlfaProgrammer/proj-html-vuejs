@@ -41,6 +41,7 @@ export default {
     div.container{
         background-color: transparent !important;
         @include categorySection;
+        padding-inline: unset;
 
         .collections-wrapper{
             @include displayGRID($col-num:4, $row-num:2);

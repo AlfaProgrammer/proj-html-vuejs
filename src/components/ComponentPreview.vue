@@ -1,12 +1,12 @@
 <template>
   <div class="article-preview">
       <figure>
-          <img :src="recipe.imgSrc" alt="">
+          <img :src="article.imgSrc" alt="">
       </figure>
-      <h3 class="title">{{recipe.title}}</h3>
-      <p class="reference">{{recipe.reference}}</p>
+      <h3 class="title">{{article.title}}</h3>
+      <p class="reference">{{article.reference}}</p>
       <hr>
-      <p class="description">{{recipe.description}}</p>
+      <p class="description">{{article.description}}</p>
       <slot name="prev-btn"></slot>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
         }
     },
     props:{
-        recipe:{
+        article:{
             type: Object,
             required: true
         }
@@ -41,6 +41,7 @@ export default {
             margin: 0 auto;
             a[type="button"]{
                 @include btn;
+                border-color: none;
             }
         }
         

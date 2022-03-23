@@ -4,7 +4,7 @@
         <h3 class="title">{{sectionTitle}}</h3>
         <p class="sec-description"> {{ sectionDescription }} </p>
         <div class="cards card-wrapper">
-            <ComponentPreview :recipe="myRecipes[recipeToShowDetails]">
+            <ComponentPreview :article="myRecipes[recipeToShowDetails]">
                 <template v-slot:prev-btn> 
                     <div class="button-wrapper">
                         <a type="button" :href="myRecipes[recipeToShowDetails].href"> Learn more </a>
@@ -53,6 +53,7 @@ export default {
     div.container{
         background-color: transparent !important;
         @include categorySection;
+        padding-inline: unset;
         // align-items: flex-start;
         
         .recipes-wrapper{

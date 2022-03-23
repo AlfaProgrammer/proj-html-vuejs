@@ -1,10 +1,10 @@
 <template>
-     <li>
+     <li class="card-article">
         <figure class="article-image">
             <img :src="articleData.imgSrc" alt="">
         </figure>
-        <h3> {{ articleData.articleTitle }} </h3>
-        <p> <span> By {{ articleData.author }} |</span> {{ articleData.publication }} </p>
+        <h3> {{ articleData.title }} </h3>
+        <p> <span> By {{ articleData.author }} |</span> {{ articleData.reference }} </p>
     </li>
      <!-- <li>
         <slot name="card-image"> Img </slot>
