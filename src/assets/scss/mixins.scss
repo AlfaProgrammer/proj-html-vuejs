@@ -15,14 +15,15 @@
       }
       img{
         width: 100%;
-        height: 100%;
+        // height: 100%;
         display: block;
       }
 }
 
 @mixin btn ($pad-inline: 15px, $bord-rad: 0, $color: $brand, $width:100%) {
   background-color: $color;
-  padding: 8px $pad-inline;
+  padding-block: 8px;
+  padding-inline: $pad-inline;
   border-color: transparent;
   color: white;
   border-radius: $bord-rad;
@@ -56,12 +57,12 @@
 
 @mixin displayFLEX( $al-items:center, 
                     $j-content:center, 
-                    ) {
+                    $f-direction: row) {
     display: flex;
     gap: $sec-flex-gap;
     align-items: $al-items;
     justify-content: $j-content;
-    // flex-direction: $f-direction;
+    flex-direction: $f-direction;
 }
 
 @mixin displayGRID( $al-items:unset,

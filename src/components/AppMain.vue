@@ -24,7 +24,7 @@ import FarmToTable from './FarmToTable.vue'
             FoodieJournal,
             PopularRecipes,
             CulinaryCollection,
-            FarmToTable
+            FarmToTable,
         },
         data(){
             return{

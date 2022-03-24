@@ -157,7 +157,25 @@ const state = new Vue.observable({
             collectionName:'Quick & Easy',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/quick-easy-recipes.png')
         },
-    ]
+    ],
+    footerData:{
+        subscribeData:{
+            gift:'Free eBook',            
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem, sapiente animi quasi modi distinctio ex aspernatur.',
+            reference: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        },
+        contactsData:{
+            location: '775 New York Ave. Brooklyn, Kings, New York 11203',
+            phone:'+ 0100-505-0000',
+            email: 'info@your-domain.com'
+        },
+        appsData:{
+            playStoreImg: require('@/assets/img/svg-and-png-Icons/download-android-200x66.png'),
+            playStoreLink: 'https://store.google.com/it?hl=it',
+            appStoreImg: require('@/assets/img/svg-and-png-Icons/download-app-store-200x66.png'),
+            appStoreLink:'https://www.apple.com/app-store/',
+        }
+    }
 })
 
 export default state

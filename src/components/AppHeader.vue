@@ -7,11 +7,12 @@
                 <li><a type="button" href="#"> Download App </a></li>
                 <li><a type="button" href="#"> Advertise with Us </a></li>
             </ul>
-            <ul class="social">
+            <SocialComponent />
+            <!-- <ul class="social">
                 <li v-for="(el, i) in socialData" :key="i">
                     <a :href="el.socialUrl"> <i :class="el.socialIcon"></i>  </a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
 
         <figure class="logo">
@@ -30,38 +31,18 @@
 
 <script>
     import NavLinks from './NavLinks.vue'
+    import SocialComponent from '@/components/SocialComponent.vue'
 
     export default {
         name: "AppHeader",
         data(){
             return{
                 logo: require('@/assets/avada-food-logo-2x.png'),
-                socialData:[
-                    {
-                        socialName: 'Instagram',
-                        socialUrl: '#',
-                        socialIcon: "fa-brands fa-instagram"
-                    },
-                    {
-                        socialName: 'FaceBook',
-                        socialUrl: '#',
-                        socialIcon: 'fa-brands fa-facebook-f'
-                    },
-                    {
-                        socialName: 'Twitter',
-                        socialUrl: '#',
-                        socialIcon: "fa-brands fa-twitter"
-                    },
-                    {
-                        socialName: 'YouTube',
-                        socialUrl: '#',
-                        socialIcon: "fa-brands fa-youtube"
-                    },
-                ]
             }
         },
         components:{
-            NavLinks
+            NavLinks,
+            SocialComponent
         }
     }
 </script>
@@ -92,27 +73,21 @@
                 display: flex;
                 align-items: flex-start;
                 padding: 5px 10px;
-                column-gap: 20px;
+                // column-gap: 20px;
 
                 ul{
-                    display: contents;
+                    display: flex;
+                    column-gap: 20px;
+
+                    &.social{
+                        margin-left: auto;
+                    }
+
                     li:hover{
                         color: $brand;
                     }
                 }
-                ul.social{
-                    li:first-child{
-                        margin-left: auto;
-                    }
-                    li{
-                        // border: 1px solid black;
-                        color: $icons;
-                        &:hover{
-                        color: $brand;
-                    }
-                    }
-                    
-                }
+                
             }
     }
    }
