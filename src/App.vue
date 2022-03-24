@@ -37,6 +37,8 @@
   a{
     @include anchorDefault
   }
-
+  button{
+    cursor: pointer;
+  }
   
 </style>

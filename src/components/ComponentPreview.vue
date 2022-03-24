@@ -54,12 +54,12 @@ export default {
         
 
         figure{ 
-        position: relative;
-        &:hover{
-            div.overlay{
-                visibility: visible;
+            position: relative;
+            &:hover{
+                div.overlay{
+                    visibility: visible;
+                }
             }
-        }
 
             div.overlay{
                @include overlay;
