@@ -165,7 +165,7 @@ const state = new Vue.observable({
             reference: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
         },
         contactsData:{
-            location: '775 New York Ave. Brooklyn, Kings, New York 11203',
+            location:   `775 New York Ave. Brooklyn, Kings, New York 11203`,
             phone:'+ 0100-505-0000',
             email: 'info@your-domain.com'
         },

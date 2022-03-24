@@ -65,8 +65,8 @@ export default {
     //    border: 2px solid red;
 
         ul{
-            display: contents;
-
+            display: contents;   
+            
             li{
                 color: $text;
                 // background-color: goldenrod;

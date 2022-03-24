@@ -11,6 +11,7 @@
   import AppMain from "@/components/AppMain.vue"
   import AppFooter from '@/components/AppFooter.vue'
 
+
   export default {
     name: 'App',
     data(){
@@ -30,16 +31,12 @@
   @import '@/assets/scss/mixins.scss';
   @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
-/* STYLE COMPONENT */
+  /* STYLE COMPONENT */
   @include defaultSet;
-
+ 
   a{
     @include anchorDefault
   }
 
-  /*///////////////////////// RICORDA DI TOGLIERE il PADDING QUIIII /////////////////////////*/
-  #app{
-    padding-bottom: 600px;
-  }
   
 </style>

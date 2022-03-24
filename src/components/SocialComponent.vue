@@ -41,6 +41,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
+    ul.social{
+        display: flex;
+        column-gap: 20px;
+
+    }
+
     li{
         // border: 1px solid black;
         color: $icons;

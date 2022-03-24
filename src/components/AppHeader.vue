@@ -49,6 +49,7 @@
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_shared.scss';
+@import '@/assets/scss/_shared.scss';
 
    div.header{
        
@@ -89,6 +90,7 @@
                 }
                 
             }
-    }
+            
+        }
    }
 </style>
