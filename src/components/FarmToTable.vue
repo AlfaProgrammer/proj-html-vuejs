@@ -24,6 +24,7 @@
         </div>
         
         <div class="advertisements">
+             
             <ul class="ads-wrapper"> 
                 <li class="latest-recipes"> 
                     <p>View our latest recipes</p>
@@ -55,6 +56,25 @@
                     <button class="popular active"> Popular </button>
                     <button class="recent"> Recent </button>
                 </div>
+
+                <div class="posts-wrapper">
+                    <ul class="post-list">
+                        <li class="post" v-for="(el, i) in myArticles.slice(0, 3)" :key="i">
+                            <figure>
+                                <img :src="el.imgSrc" alt="">
+                            </figure>
+
+                            <div class="post_text">
+                                <h4 class="post-title"> Lorem ipsum dolor sit amet. </h4>
+                                <p class="post-data"> post data</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="embedTweet">
+                   <Tweet id="692527862369357824"></Tweet>
+                </div>
             </div>
 
         </div>
@@ -68,6 +88,7 @@
 import ComponentPreview from './ComponentPreview.vue'
 import CardArticle from './CardArticle.vue'
 import SocialComponent from './SocialComponent.vue'
+import { Tweet } from 'vue-tweet-embed'
 
 import state from '../store.js'
 
@@ -76,7 +97,9 @@ export default {
     components:{
         ComponentPreview,
         CardArticle,
-        SocialComponent
+        SocialComponent,
+        Tweet,
+        
     },
     data(){
         return{
@@ -85,7 +108,8 @@ export default {
                                  Optio distinctio eius temporibus totam modi aliquid numquam repellat.`,
             iterationLimit: 7,
             recipeToShowDetails: 0,
-            myArticles: state.journalSection.articles
+            myArticles: state.journalSection.articles,
+
         }
     }
 }
@@ -153,7 +177,9 @@ export default {
                flex-grow: 1;
                border: 3px solid red;
                max-width: 30%;
-
+               & > div {
+                   margin-bottom: 20px
+               }
             //    @include displayFLEX;
 
                 ul.ads-wrapper{
@@ -237,7 +263,6 @@ export default {
                 }
 
                 div.follow-us{
-                    margin-bottom: 20px;
                     h3{
                         color: $brand;
                         margin-bottom: 20px;
@@ -253,6 +278,7 @@ export default {
                     div.posts-toggle{
                         display: flex;
                         height: 50px;
+                        margin-bottom: 30px;
 
                         button{
                             flex-grow: 1;
@@ -266,6 +292,40 @@ export default {
                         
                         
                     }
+
+                    div.posts-wrapper{
+                        margin-bottom: 40px;
+                        ul.post-list{
+                            li.post{
+                                // border: 2px solid darkgreen;
+                                display: flex;
+                                gap: 10px;
+                                margin-bottom: 10px;
+
+                                figure{
+                                    height: 50px;
+                                    max-width: 50px;
+                                    // border: 2px solid salmon;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    flex-shrink: 0;
+                                    flex-grow: 1;
+
+                                    img{
+                                        height: 100%;
+                                        width: 100%;
+                                    }
+                                }
+
+                                div.post_text{
+                                    p.post-data{
+                                        color: $icons;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }   
         }
