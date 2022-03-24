@@ -3,6 +3,9 @@
         <li v-for="(el, i) in socialData" :key="i">
             <a :href="el.socialUrl"> <i :class="el.socialIcon"></i>  </a>
         </li>
+
+        <slot name="addedSocial"></slot>
+
     </ul>
 </template>
 

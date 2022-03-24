@@ -24,16 +24,39 @@
         </div>
         
         <div class="advertisements">
-            <div>
-                <img src="" alt="">
+            <ul class="ads-wrapper"> 
+                <li class="latest-recipes"> 
+                    <p>View our latest recipes</p>
+                </li>
+
+                <li class="city-guides"> 
+                    <div class="city-guides_thumb"></div>
+                    <button type="button"> <i class="fa-solid fa-earth-americas"></i> View all City Guides </button>
+                </li>
+
+            </ul>
+
+            <div class="search"> 
+                <div class="search-icon"> <i class="fa-solid fa-magnifying-glass"></i> </div>
+                <input type="search" placeholder="Search...">  
+            </div>    
+
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <SocialComponent>
+                    <template v-slot:addedSocial>
+                        <li>  <a href="#"> <i class="fa-brands fa-pinterest"></i>  </a> </li>
+                    </template>
+                </SocialComponent>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+            <div class="posts">
+                <div class="posts-toggle">
+                    <button class="popular active"> Popular </button>
+                    <button class="recent"> Recent </button>
+                </div>
+            </div>
+
         </div>
 
 
@@ -44,6 +67,7 @@
 <script>
 import ComponentPreview from './ComponentPreview.vue'
 import CardArticle from './CardArticle.vue'
+import SocialComponent from './SocialComponent.vue'
 
 import state from '../store.js'
 
@@ -51,7 +75,8 @@ export default {
     name: 'FarmToTable',
     components:{
         ComponentPreview,
-        CardArticle
+        CardArticle,
+        SocialComponent
     },
     data(){
         return{
@@ -80,6 +105,7 @@ export default {
             margin-inline: unset;
             max-width: 45%;
         }
+
         div.title{
             @include displayFLEX($j-content: space-between);
 
@@ -124,12 +150,125 @@ export default {
            
 
             div.advertisements{
-               flex-grow: 0;
+               flex-grow: 1;
                border: 3px solid red;
                max-width: 30%;
 
-               @include displayFLEX;
+            //    @include displayFLEX;
+
+                ul.ads-wrapper{
+                  
+                  border-bottom: 1px solid $icons;
+                  margin-bottom: 40px;
+
+                  li.latest-recipes{
+                      height: 450px;
+                      background-image: url('@/assets/img/food/ad-bg.jpg');
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: center;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+
+                      p{
+                          font-size: $sec-img-mb;
+                          text-transform: uppercase;
+                          max-width: 100px;
+                          text-align: center;
+                      }
+
+                      margin-bottom: 40px;
+                  }
+
+                  li.city-guides{
+                        // border: 3px solid darkcyan;
+                        div.city-guides_thumb{
+                            height: 250px;
+                            background-image: url('@/assets/img/singapore-featured-image.jpg');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                        }    
+                        
+                        button{
+                            @include btn;
+                            width: 100%;
+                            border: transparent;
+                            margin-bottom: 40px;
+                        }
+                      
+                  }  
+                }
+
+                div.search{
+                    display: flex;
+                    align-items: center;
+                    // gap: 10px;
+                    height:40px;
+                    margin-bottom: 40px;
+
+                    .search-icon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 15%;
+                        color: $icons;
+                        // margin: 0 auto;
+                        text-align: center;
+                        background-color: white;
+                        border: 1px solid $icons;
+                        border-right: transparent;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+
+
+                    }
+                    input{
+                        height: 100%;
+                        width: 100%;
+                        border: 1px solid $icons;
+                        border-left: transparent;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+
+                    }
+                }
+
+                div.follow-us{
+                    margin-bottom: 20px;
+                    h3{
+                        color: $brand;
+                        margin-bottom: 20px;
+                    }
+                    ul.social{
+                        gap: 10px;
+                    }
+                }
+
+                div.posts{
+                    // border: 2px solid salmon;
+
+                    div.posts-toggle{
+                        display: flex;
+                        height: 50px;
+
+                        button{
+                            flex-grow: 1;
+                            background-color: $main;
+                            border: 1px solid $grey-btn;
+
+                            &.active{
+                                background-color: white;
+                            }
+                        }
+                        
+                        
+                    }
+                }
             }   
         }
+
     }
 </style>

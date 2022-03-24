@@ -97,7 +97,8 @@ import NavLinks from './NavLinks.vue'
                 iterationLimit: 4,
                 logo: require('@/assets/avada-food-logo-mob-2x.png'),
             }
-        }
+        },
+        
 
     }
 </script>
