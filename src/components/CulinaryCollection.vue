@@ -8,7 +8,7 @@
                 <figure>
                     <img :src="el.collectionThumb" alt="">
                 </figure>
-                <p class="collection-name"> {{ el.collectionName }} </p>
+                <a type="button" :href="el.href" class="collectionLink"> {{ el.collectionName }} </a>
             </li>
 
         </ul>
@@ -52,6 +52,21 @@ export default {
                 text-transform: uppercase;
                 font-size: $sec-desctiption;
 
+                a.collectionLink{
+                    padding-block: 8px;  // Same padding as the button mixin
+                    display: block;  
+                    max-width: 90%;
+                    margin: 0 auto;
+                }
+
+                &:hover{
+                    
+                    a.collectionLink {
+                        background-color: $brand;
+                        color: white;    
+                        
+                    }
+                }
                 figure{
                    max-width: 100%; 
                    max-width: 150px;

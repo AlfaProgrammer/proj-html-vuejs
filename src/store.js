@@ -134,34 +134,42 @@ const state = new Vue.observable({
     culinaryCollections:[
         {
             collectionName:'Drink',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/drinks-recipes.png')
         },
         {
             collectionName:'Soup',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/soups-recipes.png')
         },
         {
             collectionName:'Bakery',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/baking-recipes.png')
         },
         {
             collectionName:'Dinner',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/dinner-recipes.png')
         },
         {
             collectionName:'Healthy',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/healthy-recipes.png')
         },
         {
             collectionName:'Staff Picks',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/staff-picks.png')
         },
         {
             collectionName:'Appetisers',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/premium-recipes.png')
         },
         {
             collectionName:'Quick & Easy',
+            href:'#',
             collectionThumb: require('@/assets/img/svg-and-png-Icons/quick-easy-recipes.png')
         },
     ],
