@@ -5,7 +5,7 @@
 
             <div class="overlay">
                 <div class="link">  <a :href=" articleData.href "> <i class="fa-solid fa-link"></i> </a>  </div>
-                <h2 class="overlay-title"> {{ articleData.title }} </h2>
+                <h3 class="overlay-title"> {{ articleData.title }} </h3>
             </div>
         </figure>
         <h3> {{ articleData.title }} </h3>
@@ -52,23 +52,7 @@ export default {
     figure{
         position: relative;
         div.overlay{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(transparent -100%, $brand 100%);
-            color: white;
-            visibility: hidden;
-
-            div.link{
-                cursor: pointer;
-            }
+            @include overlay
         }
 
     }

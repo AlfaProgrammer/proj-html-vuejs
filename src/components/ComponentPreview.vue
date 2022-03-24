@@ -1,7 +1,13 @@
 <template>
   <div class="article-preview">
       <figure>
-          <img :src="article.imgSrc" alt="">
+            <img :src="article.imgSrc" alt="">
+
+            <div class="overlay">
+                <div class="link">  <a :href=" article.href "> <i class="fa-solid fa-link"></i> </a>  </div>
+                <h3 class="overlay-title"> {{ article.title }} </h3>
+            </div>
+
       </figure>
       <h3 class="title">{{article.title}}</h3>
       <p class="reference">{{article.reference}}</p>
@@ -45,6 +51,20 @@ export default {
             }
         }
         
+        
+
+        figure{ 
+        position: relative;
+        &:hover{
+            div.overlay{
+                visibility: visible;
+            }
+        }
+
+            div.overlay{
+               @include overlay;
+            }
+        }
     }
     
 </style>

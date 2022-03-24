@@ -8,6 +8,7 @@
                 <template v-slot:prev-btn> 
                     <div class="button-wrapper">
                         <a type="button" :href="myRecipes[recipeToShowDetails].href"> Learn more </a>
+                        <div><i class="fa-solid fa-comments"></i></div>
                     </div>
                 </template>
             </ComponentPreview>    
@@ -16,6 +17,12 @@
                 <li v-for="(el, i) in myRecipes.slice(0, iterationLimit)" :key="i">
                     <figure>
                         <img :src="el.imgSrc" alt="">
+
+                        <div class="overlay">
+                            <div class="link">  <a :href=" el.href "> <i class="fa-solid fa-link"></i> </a>  </div>
+                            <h3 class="overlay-title"> {{ el.title }} </h3>
+                        </div>
+
                     </figure>
                 </li>
 
@@ -56,10 +63,32 @@ export default {
         padding-inline: unset;
         // align-items: flex-start;
         
+        .card-wrapper{
+            .button-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
         .recipes-wrapper{
             @include  displayGRID($row-num: 4);
             width: 45%;
             align-self: flex-start;
+
+            li:hover{
+                div.overlay{
+                    visibility: visible;
+                }
+            }
+
+            figure{ 
+                position: relative;
+
+                    div.overlay{
+                        @include overlay;
+                    }
+                }
         }
     }
 </style>
