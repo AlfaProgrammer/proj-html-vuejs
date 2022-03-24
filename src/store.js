@@ -12,6 +12,7 @@ const state = new Vue.observable({
                 title:'Food Corner: Top Japanese Restaurant for Sushi',
                 reference:'March 25th, 2019',
                 author: 'admin',
+                href:'#',
                 description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi.
                                  Similique autem iste nesciunt saepe alias vitae fugit, ratione voluptas.
                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi.
@@ -22,37 +23,43 @@ const state = new Vue.observable({
                 imgSrc: require('./assets/img/food/fi-roundup.jpg'),
                 title:'Roundup: My New Favourite Recipes For Healthy Living',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             {
                 imgSrc: require('./assets/img/food/fi-toasts.jpg'),
                 title:'Why These Toasts with Tea are My New Favourite',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             {
                 imgSrc: require('./assets/img/food/fi-korean-food.jpg'),
                 title:'Meal Prep: Korean Bibimbap with Kimeki',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             {
                 imgSrc: require('./assets/img/food/fi-street-food.jpg'),
                 title:'Exploring Street Food in Bangkok',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             {
                 imgSrc: require('./assets/img/food/fi-organic-breakfast.jpg'),
                 title:'Organic Choises For Healthier Living',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             {
                 imgSrc: require('./assets/img/food/fi-water-side-rest.jpg'),
                 title:'% Waterside Restaurants in Istanbul for Special Events',
                 reference:'March 25th, 2019',
-                author: 'admin'
+                author: 'admin',
+                href: '#',
             },
             
         ]

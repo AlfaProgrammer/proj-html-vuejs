@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="embedTweet">
-                   <Tweet id="692527862369357824"></Tweet>
+                   <Tweet id="783943172057694208"></Tweet>
                 </div>
             </div>
 
@@ -145,7 +145,6 @@ export default {
 
         div.farm-content{
             @include displayFLEX($j-content:space-between, $al-items: flex-start);
-            border: 2px solid salmon;
 
             div.articles-wrapper{
                 width: 70%;
@@ -155,7 +154,6 @@ export default {
                 }
                 .article-preview{
                     width: 100%;
-                    border: 3px solid brown;
                     grid-column: 1 / -1;              
                 }
                 .card-article{
@@ -175,7 +173,6 @@ export default {
 
             div.advertisements{
                flex-grow: 1;
-               border: 3px solid red;
                max-width: 30%;
                & > div {
                    margin-bottom: 20px
